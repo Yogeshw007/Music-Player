@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music player</title>
+    <!-- External stylesheet-->
+    <link
+      rel="stylesheet"
+      href="./asserts/stylesheets/styles.css"
+      text="text.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header container -->
+    <header id="main-header">
+      <!-- Header elements -->
+      <div class="flex-container-main-between-axis-center">
+        <div
+          id="header-left-side-container"
+          class="flex-container-center text-grey"
+        >
+          <a href="./index.html">
+            <img
+              src="./asserts/Images/brand-logo.PNG"
+              alt="brand logo"
+              id="brand-logo"
+            />
+          </a>
+          <span id="favorite" class="mx-10">Favorites</span>
+        </div>
+        <div id="header-right-side-container" class="flex-container-center">
+          <div
+            id="header-search-container"
+            class="flex-container-center position-relative text-grey"
+          >
+            <i class="fa-solid fa-magnifying-glass position-absolute ml-2"></i>
+            <input
+              type="text"
+              name="search"
+              id="header-search"
+              placeholder="Search"
+              class="border-none bg-darkblue outline-none px-2 py-2 border-pill mx-2 px-5 py-3"
+            />
+            <i class="fa-solid fa-microphone position-absolute mr-3"></i>
+          </div>
+          <div id="notification" class="position-relative">
+            <i class="fa-solid fa-bell text-white mx-10"></i>
+            <i
+              class="fa-solid fa-circle red-icon text-white position-absolute"
+            ></i>
+          </div>
+
+          <div id="user-img"></div>
+        </div>
+      </div>
+      <!-- Header search bar for mobile -->
+      <div
+        id="header-search-section-mob"
+        class="display-none position-aboslute flex-container-center text-grey"
+      >
+        <div
+          class="header-search-container-mob position-relative flex flex-container-center"
+        >
+          <i class="fa-solid fa-magnifying-glass position-absolute ml-2"></i>
+          <input
+            type="text"
+            name="search"
+            id="header-search-mob"
+            placeholder="Search"
+            class="border-none bg-darkblue outline-none px-2 py-2 border-pill mx-2 px-5 py-3"
+          />
+          <i class="fa-solid fa-microphone position-absolute mr-3"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main container -->
+    <div id="main-container" class="flex-container-main-center my-15 mx-15">
+      <!-- Main content -->
+      <div id="main-content">
+        <!-- Artist banner sectoin -->
+        <div id="album-banner" class="flex bg-darkblue">
+          <!-- Artist image -->
+          <div id="banner-img" class="center-img"></div>
+          <!-- Artist details -->
+          <div class="album-details mx-5 my-10">
+            <div
+              class="album-details-header flex flex-container-main-between-axis-center"
+            >
+              <div id="artist-info">
+                <h3 id="album-heading" class="mb-2 text-white">ColdPlay</h3>
+                <span id="artist-band" class="text-grey">British band</span>
+              </div>
+              <div id="followers" class="text-grey">855 followers</div>
+            </div>
+            <p class="artist-about text-grey mt-5">
+              Coldplay are a British rock band formed in London in 1996. They
+              consist of vocalist and pianist Chris Martin, guitarist Jonny
+              Buckland, bassist Guy Berryman, drummer Will Champion and creative
+              director Phil Harvey.
+            </p>
+            <div id="album-button-container" class="text-white my-5">
+              <button id="play-all">Play All</button>
+              <button id="follow">Follow</button>
+            </div>
+            <span class="text-white">245 Tracks| 180 Albums</span>
+          </div>
+        </div>
+        <!-- Artist songs group -->
+        <ul id="artist-songs-music-box">
+          <!-- Artist songs item -->
+          <li
+            class="artist-music-item px-5 py-2 flex-container-main-between-axis-center my-5"
+          >
+            <div class="left-artist-music-details flex-container-center">
+              <span class="item-number text-grey mr-3 font-8rem">01</span>
+              <img
+                src="./asserts/Images/music-icon1.PNG"
+                alt="music icon"
+                class="music-icon"
+              />
+              <div class="music-details mx-5">
+                <h4 class="text-white font-9rem">Miracle</h4>
+                <span class="text-grey artist-name font-8rem">Else</span>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-heart text-grey mx-5"></i>
+              <i class="fa-solid fa-plus text-grey"></i>
+            </div>
+          </li>
+          <li
+            class="artist-music-item px-5 py-2 flex-container-main-between-axis-center my-5"
+          >
+            <div class="left-artist-music-details flex-container-center">
+              <span class="item-number text-grey mr-3 font-8rem">02</span>
+              <img
+                src="./asserts/Images/music-icon2.PNG"
+                alt="music icon"
+                class="music-icon"
+              />
+              <div class="music-details mx-5">
+                <h4 class="text-white font-9rem">Miracle</h4>
+                <span class="text-grey artist-name font-8rem">Else</span>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-heart text-grey mx-5"></i>
+              <i class="fa-solid fa-plus text-grey"></i>
+            </div>
+          </li>
+          <li
+            class="artist-music-item px-5 py-2 flex-container-main-between-axis-center my-5"
+          >
+            <div class="left-artist-music-details flex-container-center">
+              <span class="item-number text-grey mr-3 font-8rem">03</span>
+              <img
+                src="./asserts/Images/music-icon3.PNG"
+                alt="music icon"
+                class="music-icon"
+              />
+              <div class="music-details mx-5">
+                <h4 class="text-white font-9rem">Miracle</h4>
+                <span class="text-grey artist-name font-8rem">Else</span>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-heart text-grey mx-5"></i>
+              <i class="fa-solid fa-plus text-grey"></i>
+            </div>
+          </li>
+          <li
+            class="artist-music-item px-5 py-2 flex-container-main-between-axis-center my-5"
+          >
+            <div class="left-artist-music-details flex-container-center">
+              <span class="item-number text-grey mr-3 font-8rem">04</span>
+              <img
+                src="./asserts/Images/music-icon1.PNG"
+                alt="music icon"
+                class="music-icon"
+              />
+              <div class="music-details mx-5">
+                <h4 class="text-white font-9rem">Miracle</h4>
+                <span class="text-grey artist-name font-8rem">Else</span>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-heart text-grey mx-5"></i>
+              <i class="fa-solid fa-plus text-grey"></i>
+            </div>
+          </li>
+          <li
+            class="artist-music-item px-5 py-2 flex-container-main-between-axis-center my-5"
+          >
+            <div class="left-artist-music-details flex-container-center">
+              <span class="item-number text-grey mr-3 font-8rem">05</span>
+              <img
+                src="./asserts/Images/music-icon2.PNG"
+                alt="music icon"
+                class="music-icon"
+              />
+              <div class="music-details mx-5">
+                <h4 class="text-white font-9rem">Miracle</h4>
+                <span class="text-grey artist-name font-8rem">Else</span>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-heart text-grey mx-5"></i>
+              <i class="fa-solid fa-plus text-grey"></i>
+            </div>
+          </li>
+          <li
+            class="artist-music-item px-5 py-2 flex-container-main-between-axis-center my-5"
+          >
+            <div class="left-artist-music-details flex-container-center">
+              <span class="item-number text-grey mr-3 font-8rem">06</span>
+              <img
+                src="./asserts/Images/music-icon3.PNG"
+                alt="music icon"
+                class="music-icon"
+              />
+              <div class="music-details mx-5">
+                <h4 class="text-white font-9rem">Miracle</h4>
+                <span class="text-grey artist-name font-8rem">Else</span>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-heart text-grey mx-5"></i>
+              <i class="fa-solid fa-plus text-grey"></i>
+            </div>
+          </li>
+          <li
+            class="artist-music-item px-5 py-2 flex-container-main-between-axis-center my-5"
+          >
+            <div class="left-artist-music-details flex-container-center">
+              <span class="item-number text-grey mr-3 font-8rem">07</span>
+              <img
+                src="./asserts/Images/music-icon1.PNG"
+                alt="music icon"
+                class="music-icon"
+              />
+              <div class="music-details mx-5">
+                <h4 class="text-white font-9rem">Miracle</h4>
+                <span class="text-grey artist-name font-8rem">Else</span>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-heart text-grey mx-5"></i>
+              <i class="fa-solid fa-plus text-grey"></i>
+            </div>
+          </li>
+          <li
+            class="artist-music-item px-5 py-2 flex-container-main-between-axis-center my-5"
+          >
+            <div class="left-artist-music-details flex-container-center">
+              <span class="item-number text-grey mr-3 font-8rem">08</span>
+              <img
+                src="./asserts/Images/music-icon2.PNG"
+                alt="music icon"
+                class="music-icon"
+              />
+              <div class="music-details mx-5">
+                <h4 class="text-white font-9rem">Miracle</h4>
+                <span class="text-grey artist-name font-8rem">Else</span>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-heart text-grey mx-5"></i>
+              <i class="fa-solid fa-plus text-grey"></i>
+            </div>
+          </li>
+          <li
+            class="artist-music-item px-5 py-2 flex-container-main-between-axis-center my-5"
+          >
+            <div class="left-artist-music-details flex-container-center">
+              <span class="item-number text-grey mr-3 font-8rem">09</span>
+              <img
+                src="./asserts/Images/music-icon3.PNG"
+                alt="music icon"
+                class="music-icon"
+              />
+              <div class="music-details mx-5">
+                <h4 class="text-white font-9rem">Miracle</h4>
+                <span class="text-grey artist-name font-8rem">Else</span>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-heart text-grey mx-5"></i>
+              <i class="fa-solid fa-plus text-grey"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Aside section -->
+      <aside id="aside1">
+        <!-- Similar artists section -->
+        <div id="similar-artists">
+          <!-- Similar artists header -->
+          <div
+            id="similar-artists-header"
+            class="flex flex-container-main-between-axis-center"
+          >
+            <h2 class="text-white">Similar Artists</h2>
+            <a class="bg-transparent text-white">
+              View All
+            </a>
+          </div>
+          <!-- Recently played music group -->
+          <ul id="similar-artist-music-group">
+            <!-- Recently played music item -->
+            <li
+              class="similar-artist-music-item flex flex-container-main-between-axis-center"
+            >
+              <div
+                id="left-similar-artist-container"
+                class="flex my-2 flex-container-center"
+              >
+                <div class="similar-artist-music-icon center-img"></div>
+                <div class="similar-artist-music-details text-white mx-10 my-3">
+                  <h4 class="font-9rem">Imagine Dragons</h4>
+                  <span class="font-8rem text-grey">Pop band</span>
+                </div>
+              </div>
+              <div
+                class="right-similar-artist-release-container flex-container-center flex-column align-self-start text-grey"
+              >
+                <i class="fa-sharp fa-solid fa-ellipsis"></i>
+                <div class="music-duration">
+                  4.44
+                </div>
+              </div>
+            </li>
+            <li
+              class="similar-artist-music-item flex flex-container-main-between-axis-center"
+            >
+              <div
+                id="left-similar-artist-container"
+                class="flex my-2 flex-container-center"
+              >
+                <div class="similar-artist-music-icon center-img"></div>
+                <div class="similar-artist-music-details text-white mx-10 my-3">
+                  <h4 class="font-9rem">Imagine Dragons</h4>
+                  <span class="font-8rem text-grey">Pop band</span>
+                </div>
+              </div>
+              <div
+                class="right-similar-artist-release-container flex-container-center flex-column align-self-start text-grey"
+              >
+                <i class="fa-sharp fa-solid fa-ellipsis"></i>
+                <div class="music-duration">
+                  4.44
+                </div>
+              </div>
+            </li>
+            <li
+              class="similar-artist-music-item flex flex-container-main-between-axis-center"
+            >
+              <div
+                id="left-similar-artist-container"
+                class="flex my-2 flex-container-center"
+              >
+                <div class="similar-artist-music-icon center-img"></div>
+                <div class="similar-artist-music-details text-white mx-10 my-3">
+                  <h4 class="font-9rem">Imagine Dragons</h4>
+                  <span class="font-8rem text-grey">Pop band</span>
+                </div>
+              </div>
+              <div
+                class="right-similar-artist-release-container flex-container-center flex-column align-self-start text-grey"
+              >
+                <i class="fa-sharp fa-solid fa-ellipsis"></i>
+                <div class="music-duration">
+                  4.44
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Recently played container -->
+        <div id="recently-played-container" class="mt-10">
+          <!-- Recently played header -->
+          <div
+            id="recently-played-header"
+            class="flex-container-main-between-axis-center mb-10"
+          >
+            <h2 class="heading text-white">Recently played</h2>
+            <a class="bg-transparent text-white">
+              View All
+            </a>
+          </div>
+          <!-- Recently played music box -->
+          <ul id="recently-played-music-box">
+            <!-- Recently played music item -->
+            <li
+              class="recently-played-music-item flex-container-main-between-axis-center my-5"
+            >
+              <div class="left-recently-played-details flex-container-center">
+                <span class="item-number text-grey mr-3 font-8rem">01</span>
+                <img
+                  src="./asserts/Images/music-icon1.PNG"
+                  alt="music icon"
+                  class="music-icon"
+                />
+                <div class="music-details mx-5">
+                  <h4 class="text-white font-9rem">Miracle</h4>
+                  <span class="text-grey artist-name font-8rem">Else</span>
+                </div>
+              </div>
+              <i class="fa-regular fa-heart text-grey"></i>
+            </li>
+            <li
+              class="recently-played-music-item flex-container-main-between-axis-center my-5"
+            >
+              <div class="left-recently-played-details flex-container-center">
+                <span class="item-number text-grey mr-3 font-8rem">02</span>
+                <img
+                  src="./asserts/Images/music-icon1.PNG"
+                  alt="music icon"
+                  class="music-icon"
+                />
+                <div class="music-details mx-5">
+                  <h4 class="text-white font-9rem">Miracle</h4>
+                  <span class="text-grey artist-name font-8rem">Else</span>
+                </div>
+              </div>
+              <i class="fa-regular fa-heart text-grey"></i>
+            </li>
+            <li
+              class="recently-played-music-item flex-container-main-between-axis-center my-5"
+            >
+              <div class="left-recently-played-details flex-container-center">
+                <span class="item-number text-grey mr-3 font-8rem">03</span>
+                <img
+                  src="./asserts/Images/music-icon1.PNG"
+                  alt="music icon"
+                  class="music-icon"
+                />
+                <div class="music-details mx-5">
+                  <h4 class="text-white font-9rem">Miracle</h4>
+                  <span class="text-grey artist-name font-8rem">Else</span>
+                </div>
+              </div>
+              <i class="fa-regular fa-heart text-grey"></i>
+            </li>
+            <li
+              class="recently-played-music-item flex-container-main-between-axis-center my-5"
+            >
+              <div class="left-recently-played-details flex-container-center">
+                <span class="item-number text-grey mr-3 font-8rem">04</span>
+                <img
+                  src="./asserts/Images/music-icon1.PNG"
+                  alt="music icon"
+                  class="music-icon"
+                />
+                <div class="music-details mx-5">
+                  <h4 class="text-white font-9rem">Miracle</h4>
+                  <span class="text-grey artist-name font-8rem">Else</span>
+                </div>
+              </div>
+              <i class="fa-regular fa-heart text-grey"></i>
+            </li>
+            <li
+              class="recently-played-music-item flex-container-main-between-axis-center my-5"
+            >
+              <div class="left-recently-played-details flex-container-center">
+                <span class="item-number text-grey mr-3 font-8rem">05</span>
+                <img
+                  src="./asserts/Images/music-icon1.PNG"
+                  alt="music icon"
+                  class="music-icon"
+                />
+                <div class="music-details mx-5">
+                  <h4 class="text-white font-9rem">Miracle</h4>
+                  <span class="text-grey artist-name font-8rem">Else</span>
+                </div>
+              </div>
+              <i class="fa-regular fa-heart text-grey"></i>
+            </li>
+            <li
+              class="recently-played-music-item flex-container-main-between-axis-center my-5"
+            >
+              <div class="left-recently-played-details flex-container-center">
+                <span class="item-number text-grey mr-3 font-8rem">06</span>
+                <img
+                  src="./asserts/Images/music-icon1.PNG"
+                  alt="music icon"
+                  class="music-icon"
+                />
+                <div class="music-details mx-5">
+                  <h4 class="text-white font-9rem">Miracle</h4>
+                  <span class="text-grey artist-name font-8rem">Else</span>
+                </div>
+              </div>
+              <i class="fa-regular fa-heart text-grey"></i>
+            </li>
+            <li
+              class="recently-played-music-item flex-container-main-between-axis-center my-5"
+            >
+              <div class="left-recently-played-details flex-container-center">
+                <span class="item-number text-grey mr-3 font-8rem">07</span>
+                <img
+                  src="./asserts/Images/music-icon1.PNG"
+                  alt="music icon"
+                  class="music-icon"
+                />
+                <div class="music-details mx-5">
+                  <h4 class="text-white font-9rem">Miracle</h4>
+                  <span class="text-grey artist-name font-8rem">Else</span>
+                </div>
+              </div>
+              <i class="fa-regular fa-heart text-grey"></i>
+            </li>
+            <li
+              class="recently-played-music-item flex-container-main-between-axis-center my-5"
+            >
+              <div class="left-recently-played-details flex-container-center">
+                <span class="item-number text-grey mr-3 font-8rem">08</span>
+                <img
+                  src="./asserts/Images/music-icon1.PNG"
+                  alt="music icon"
+                  class="music-icon"
+                />
+                <div class="music-details mx-5">
+                  <h4 class="text-white font-9rem">Miracle</h4>
+                  <span class="text-grey artist-name font-8rem">Else</span>
+                </div>
+              </div>
+              <i class="fa-regular fa-heart text-grey"></i>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer container - Music player-->
+    <footer
+      id="main-footer"
+      class="bg-darkgrey flex-container-main-between-axis-center"
+    >
+      <!-- Left side music player elements -->
+      <div id="left-side-footer" class="flex flex-container-center">
+        <div id="current-song-img" class="center-img mx-3"></div>
+        <div class="current-song-details text-white">
+          <h3>Imagine by John</h3>
+          <span class="current-song-artist">John Lennon</span>
+        </div>
+        <i class="fa-regular fa-heart ml-3 text-white align-self-start"></i>
+        <i class="fa-solid fa-ban ml-3 text-white align-self-start"></i>
+      </div>
+
+      <!-- Middle side music player elements -->
+      <div id="middle-footer" class="position-relative">
+        <audio
+          src="./music/Cartoon NCS.mp3"
+          controls
+          class="px-3"
+          controlsList="nodownload noplaybackrate"
+        ></audio>
+        <i class="fa-solid fa-backward position-absolute"></i>
+        <i class="fa-solid fa-forward position-absolute"></i>
+      </div>
+
+      <!-- Right side music player elements -->
+      <div
+        id="right-side-footer"
+        class="text-white flex flex-container-center gap-decimal5"
+      >
+        <div id="playlist-icon" class="icon center-img inline-block"></div>
+        <div
+          id="computer-speaker-icon"
+          class="icon center-img inline-block"
+        ></div>
+        <i class="fa-solid fa-volume-high"></i>
+        <div id="progress-bar" class="position-relative">
+          <progress id="volume" value="32" max="100"
+            ><i class="fa-solid fa-circle"></i
+          ></progress>
+          <i class="fa-solid fa-circle fill position-absolute"></i>
+        </div>
+
+        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/4c0f048b51.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

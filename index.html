@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <!-- External stylesheet-->
+    <link rel="stylesheet" href="./asserts/stylesheets/styles.css" text="text.css">
+</head>
+
+<body>
+    <!-- Header container -->
+    <header id="main-header">
+        <!-- Header elements -->
+        <div class="flex-container-main-between-axis-center">
+            <div id="header-left-side-container" class="flex-container-center text-grey">
+                <a href="./index.html" class="home-page-link">
+                    <img src="./asserts/Images/brand-logo.PNG" alt="brand logo" id="brand-logo">
+                </a>
+                <span id="favorite" class="mx-10">Favorites</span>
+            </div>
+            <div id="header-right-side-container" class="flex-container-center ">
+                <div id="header-search-container" class="flex-container-center position-relative text-grey">
+                    <i class="fa-solid fa-magnifying-glass position-absolute ml-2"></i>
+                    <input type="text" name="search" id="header-search" placeholder="Search"
+                        class=" border-none bg-darkblue outline-none px-2 py-2 border-pill mx-2 px-5 py-3">
+                    <i class="fa-solid fa-microphone position-absolute mr-3"></i>
+                </div>
+                <div id="notification" class="position-relative">
+                    <i class="fa-solid fa-bell text-white mx-10"></i>
+                    <i class="fa-solid fa-circle red-icon text-white position-absolute"></i>
+                </div>
+
+                <div id="user-img"></div>
+            </div>
+        </div>
+        <!-- Header search bar for mobile -->
+        <div id="header-search-section-mob" class="display-none position-aboslute flex-container-center text-grey">
+            <div class="header-search-container-mob position-relative flex flex-container-center">
+                <i class="fa-solid fa-magnifying-glass position-absolute ml-2"></i>
+                <input type="text" name="search" id="header-search-mob" placeholder="Search"
+                    class=" border-none bg-darkblue outline-none px-2 py-2 border-pill mx-2 px-5 py-3">
+                <i class="fa-solid fa-microphone position-absolute mr-3"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main container -->
+    <div id="main-container" class="flex flex-container-main-center mx-15">
+        <!-- Main content -->
+        <main id="main-content">
+            <!-- Home page banner -->
+            <div id="banner" class="position-relative">
+                <i class="fa-solid fa-circle-arrow-left carousel text-white position-absolute"></i>
+                <ul class="flex flex-container-main-between-axis-center" id="banner-image-group">
+                    <li class="banner-image-item flex flex-container-center">
+                        <div class="banner-image center-img banner1"></div>
+                    </li>
+                    <li class="banner-image-item flex flex-container-center">
+                        <div class="banner-image center-img banner2">
+                        </div>
+                    </li>
+                    <li class="banner-image-item flex flex-container-center">
+                        <div class="banner-image center-img banner3">
+                        </div>
+                    </li>
+                </ul>
+                <i class="fa-solid fa-circle-arrow-right carousel text-white position-absolute"></i>
+            </div>
+            <!-- Latest release section -->
+            <div id="latest-release" class="mt-5 text-white">
+                <h2 class="mb-5 heading">Latest release</h2>
+                <!-- Latest release group -->
+                <ul class="flex list-style-none flex-main-start flex-wrap" id="latest-release-group">
+                    <!-- Latest release items -->
+                    <li class="latest-release-item flex-container-center justify-content-between">
+                        <div class="left-latest-release-container flex-container-center align-items-center">
+                            <img src="./asserts/Images/latest-release-img.PNG" alt="latest release">
+                            <div class="music-details mx-5">
+                                <h3 class="mb-5">Onism</h3>
+                                <span class="text-grey">AUG 11, 2017</span>
+                            </div>
+                        </div>
+                        <div
+                            class="right-latest-release-container flex-container-center flex-column align-self-start text-grey">
+                            <i class="fa-sharp fa-solid fa-ellipsis"></i>
+                            <div class="music-duration">
+                                4.44
+                            </div>
+                        </div>
+                    </li>
+                    <li class="latest-release-item flex-container-center justify-content-between">
+                        <div class="left-latest-release-container flex-container-center align-items-center">
+                            <img src="./asserts/Images/latest-release-img.PNG" alt="latest release">
+                            <div class="music-details mx-5">
+                                <h3 class="mb-5">Onism</h3>
+                                <span class="text-grey">AUG 11, 2017</span>
+                            </div>
+                        </div>
+                        <div
+                            class="right-latest-release-container flex-container-center flex-column align-self-start text-grey">
+                            <i class="fa-sharp fa-solid fa-ellipsis"></i>
+                            <div class="music-duration">
+                                4.44
+                            </div>
+                        </div>
+                    </li>
+                    <li class="latest-release-item flex-container-center justify-content-between">
+                        <div class="left-latest-release-container flex-container-center align-items-center">
+                            <img src="./asserts/Images/latest-release-img.PNG" alt="latest release">
+                            <div class="music-details mx-5">
+                                <h3 class="mb-5">Onism</h3>
+                                <span class="text-grey">AUG 11, 2017</span>
+                            </div>
+                        </div>
+                        <div
+                            class="right-latest-release-container flex-container-center flex-column align-self-start text-grey">
+                            <i class="fa-sharp fa-solid fa-ellipsis"></i>
+                            <div class="music-duration">
+                                4.44
+                            </div>
+                        </div>
+                    </li>
+                    <li class="latest-release-item flex-container-center justify-content-between">
+                        <div class="left-latest-release-container flex-container-center align-items-center">
+                            <img src="./asserts/Images/latest-release-img.PNG" alt="latest release">
+                            <div class="music-details mx-5">
+                                <h3 class="mb-5">Onism</h3>
+                                <span class="text-grey">AUG 11, 2017</span>
+                            </div>
+                        </div>
+                        <div
+                            class="right-latest-release-container flex-container-center flex-column align-self-start text-grey">
+                            <i class="fa-sharp fa-solid fa-ellipsis"></i>
+                            <div class="music-duration">
+                                4.44
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Popular artist section -->
+            <div id="popular-artist" class="mt-10">
+                <h2 id="popular-artist-heading" class="text-white my-5 heading">
+                    Popular artist
+                </h2>
+                <!-- Popular artist group -->
+                <ul id="popular-artist-group" class="flex flex-row list-style-none">
+                    <!-- Popular artist items -->
+                    <li class="popular-artist-group-item flex-1 mr-3">
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+                            <div class="popular-artist-img center-img border-circle" id="popular-artist-1">
+                            </div>
+                            <h5 class="artist-name text-grey mt-3 text-center">ColdPlay</h5>
+                        </a>
+
+                    </li>
+                    <li class="popular-artist-group-item flex-1 ">
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+                            <div class="popular-artist-img center-img border-circle" id="popular-artist-2">
+                            </div>
+                            <h5 class="artist-name text-grey mt-3 text-center">Ed sheeran</h5>
+                        </a>
+                    </li>
+                    <li class="popular-artist-group-item flex-1">
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+                            <div class="popular-artist-img center-img border-circle" id="popular-artist-3">
+                            </div>
+                            <h5 class="artist-name text-grey mt-3 text-center">Zayn</h5>
+                        </a>
+                    </li>
+                    <li class="popular-artist-group-item flex-1 mr-3">
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+                            <div class="popular-artist-img center-img border-circle" id="popular-artist-4">
+                            </div>
+                            <h5 class="artist-name text-grey mt-3 text-center">Charlie puth</h5>
+                        </a>
+                    </li>
+                    <li class="popular-artist-group-item flex-1">
+
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+                            <div class="popular-artist-img center-img border-circle" id="popular-artist-5">
+                            </div>
+                            <h5 class="artist-name text-grey mt-3 text-center">Imagine Dragon</h5>
+                        </a>
+                    </li>
+                    <li class="popular-artist-group-item flex-1">
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+                            <div class="popular-artist-img center-img border-circle" id="popular-artist-6">
+                            </div>
+                            <h5 class="artist-name text-grey mt-3 text-center">Bruno mars</h5>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Music station -->
+            <div id="music-group" class="mt-10">
+                <!-- Music station image container -->
+                <ul id="music-station-group" class="flex">
+                    <!-- Music station images -->
+                    <li class="music-station-group-item  flex-1">
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+
+                            <div class="music-station-img center-img " id="music-station-1">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="music-station-group-item flex flex-1 border-circle ">
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+                            <div class="music-station-img center-img border-circle position-relative"
+                                id="music-station-2">
+                                <div class="music-station-category position-absolute flex-container-center">
+                                    <div class="music-station-background position-absolute border-circle"
+                                        id="music-station-background-1">
+                                    </div>
+                                    <h5 class="text-white music-station-name position-relative text-center">Love</h5>
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li class="music-station-group-item flex flex-1 position-relative border-circle ">
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+
+                        </a>
+                        <div class="music-station-img center-img border-circle position-relative" id="music-station-3">
+                            <div class="music-station-category position-absolute flex-container-center">
+                                <h5 class="text-white music-station-name text-center">Retro</h5>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="music-station-group-item flex flex-1 border-circle ">
+                        <a href="./artistplaylist.html" class="artist-playlist-link">
+
+                            <div class="music-station-img center-img border-circle position-relative"
+                                id="music-station-4">
+                                <div class="music-station-category position-absolute flex-container-center">
+                                    <div class="music-station-background position-absolute border-circle"
+                                        id="music-station-background-4">
+                                    </div>
+                                    <h5 class="text-white music-station-name position-relative text-center">Chill</h5>
+                                </div>
+                        </a>
+            </div>
+
+            </li>
+            <li class="music-station-group-item flex flex-1 border-circle ">
+                <a href="./artistplaylist.html" class="artist-playlist-link">
+
+                    <div class="music-station-img center-img border-circle position-relative" id="music-station-5">
+                        <div class="music-station-category position-absolute flex-container-center">
+                            <div class="music-station-background position-absolute border-circle"
+                                id="music-station-background-5">
+                            </div>
+                            <h5 class="text-white music-station-name position-relative text-center">Workout</h5>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="music-station-group-item flex flex-1 border-circle ">
+                <a href="./artistplaylist.html" class="artist-playlist-link">
+                    <div class="music-station-img center-img border-circle position-relative" id="music-station-6">
+                        <div class="music-station-category position-absolute flex-container-center">
+                            <div class="music-station-background position-absolute border-circle"
+                                id="music-station-background-6">
+                            </div>
+                            <h5 class="text-white music-station-name position-relative text-center">Rock</h5>
+                        </div>
+                    </div>
+                </a>
+
+            </li>
+            <li class="music-station-group-item flex flex-1 border-circle ">
+                <a href="./artistplaylist.html" class="artist-playlist-link">
+                    <div class="music-station-img center-img border-circle position-relative" id="music-station-7">
+                        <div class="music-station-category position-absolute flex-container-center">
+                            <div class="music-station-background position-absolute border-circle"
+                                id="music-station-background-7">
+                            </div>
+                            <h5 class="text-white music-station-name position-relative text-center">Rock</h5>
+                        </div>
+                    </div>
+                </a>
+
+            </li>
+            </ul>
+    </div>
+
+    <!-- Moments container -->
+    <div id="moments-banner" class="my-5">
+        <!-- Moments banner group -->
+        <ul id="moments-banner-group" class="flex">
+            <!-- Moments banner item -->
+            <li class="moments-banner-item position-relative flex flex-1 flex-container-center mr-3 position-relative">
+                <div class="moments-banner-img center-img" id="moments-banner-img-1"></div>
+                <div class="moments-banner-background position-absolute" id="moments-banner-background-1"></div>
+                <h5 class="text-white position-absolute moments-banner-text">Party</h5>
+            </li>
+            <li class="moments-banner-item position-relative flex flex-1 flex-container-center mr-3 position-relative">
+                <div class="moments-banner-img center-img" id="moments-banner-img-2"></div>
+                <div class="moments-banner-background position-absolute" id="moments-banner-background-2"></div>
+                <h5 class="text-white position-absolute moments-banner-text">Electronic</h5>
+            </li>
+            <li class="moments-banner-item position-relative flex flex-1 flex-container-center mr-3 position-relative">
+                <div class="moments-banner-img center-img" id="moments-banner-img-3"></div>
+                <div class="moments-banner-background position-absolute" id="moments-banner-background-3"></div>
+                <h5 class="text-white position-absolute moments-banner-text">Road Trip</h5>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Latest english songs container -->
+    <div id="latest-english" class="my-10">
+        <h3 id="latest-english-heading" class="text-white heading">
+            Latest English
+        </h3>
+        <!-- Latest english songs group -->
+        <ul class="flex latest-english-group">
+            <!-- Latest english songs item-->
+            <li class="flex latest-english-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-english-img center-img" id="latest-english-img-1"></div>
+                <div class="latest-english-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-english-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-english-img center-img" id="latest-english-img-2"></div>
+                <div class="latest-english-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-english-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-english-img center-img" id="latest-english-img-3"></div>
+                <div class="latest-english-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-english-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-english-img center-img" id="latest-english-img-4"></div>
+                <div class="latest-english-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-english-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-english-img center-img" id="latest-english-img-5"></div>
+                <div class="latest-english-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-english-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-english-img center-img" id="latest-english-img-6"></div>
+                <div class="latest-english-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Latest hindi songs container -->
+    <div id="latest-hindi" class="my-10">
+        <h3 id="latest-english-hindi" class="text-white heading">
+            Latest Hindi
+        </h3>
+        <!-- Latest hindi songs group -->
+        <ul class="flex latest-hindi-group">
+            <!-- Latest hindi songs item -->
+            <li class="flex latest-hindi-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-hindi-img center-img" id="latest-hindi-img-1"></div>
+                <div class="latest-hindi-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-hindi-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-hindi-img center-img" id="latest-hindi-img-2"></div>
+                <div class="latest-hindi-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-hindi-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-hindi-img center-img" id="latest-hindi-img-3"></div>
+                <div class="latest-hindi-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-hindi-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-hindi-img center-img" id="latest-hindi-img-4"></div>
+                <div class="latest-hindi-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-hindi-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-hindi-img center-img" id="latest-hindi-img-5"></div>
+                <div class="latest-hindi-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+            <li class="flex latest-hindi-item flex-column my-2 mr-2 flex-1">
+                <div class="latest-hindi-img center-img" id="latest-hindi-img-6"></div>
+                <div class="latest-hindi-details text-white flex flex-column">
+                    <h3 class="my-2">Oniom</h3>
+                    <span>AUG 11, 2017</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </main>
+
+    <!-- Aside container -->
+    <aside id="aside1">
+        <!-- Queue section container -->
+        <div id="queue-container">
+            <!-- Queue header -->
+            <div id="queue-header" class="flex-container-main-between-axis-center mb-10">
+                <h2 class="heading text-white">Queue</h2>
+                <a id="queue-dropdown" class="bg-transparent">
+                    Queue
+                    <i class="fa-solid fa-angle-down ml-5"></i>
+                </a>
+            </div>
+            <!-- Queue music box -->
+            <ul id="queue-music-box">
+                <!-- Queue music item -->
+                <li class="queue-music-item flex-container-main-between-axis-center my-5">
+                    <div class="left-queue-details flex-container-center">
+                        <span class="item-number text-grey mr-3 font-8rem">01</span>
+                        <img src="./asserts/Images/music-icon1.PNG" alt="music icon" class="music-icon">
+                        <div class="music-details mx-5">
+                            <h4 class="text-white font-9rem">Miracle</h4>
+                            <span class="text-grey artist-name font-8rem">Else</span>
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart text-grey"></i>
+                </li>
+                <li class="queue-music-item flex-container-main-between-axis-center my-5">
+                    <div class="left-queue-details flex-container-center">
+                        <span class="item-number text-grey mr-3 font-8rem">02</span>
+                        <img src="./asserts/Images/music-icon2.PNG" alt="music icon" class="music-icon">
+                        <div class="music-details mx-5">
+                            <h4 class="text-white font-9rem">Worry About Us</h4>
+                            <span class="text-grey artist-name font-8rem">Roise Lowe</span>
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart text-grey"></i>
+                </li>
+                <li class="queue-music-item flex-container-main-between-axis-center my-5">
+                    <div class="left-queue-details flex-container-center">
+                        <span class="item-number text-grey mr-3 font-8rem">03</span>
+                        <img src="./asserts/Images/music-icon3.PNG" alt="music icon" class="music-icon">
+                        <div class="music-details mx-5">
+                            <h4 class="text-white font-9rem">New Skin</h4>
+                            <span class="text-grey artist-name font-8rem">Flume</span>
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart text-grey"></i>
+                </li>
+                <li class="queue-music-item flex-container-main-between-axis-center my-5">
+                    <div class="left-queue-details flex-container-center">
+                        <span class="item-number text-grey mr-3 font-8rem">04</span>
+                        <img src="./asserts/Images/music-icon1.PNG" alt="music icon" class="music-icon">
+                        <div class="music-details mx-5">
+                            <h4 class="text-white font-9rem">Miracle</h4>
+                            <span class="text-grey artist-name font-8rem">Else</span>
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart text-grey"></i>
+                </li>
+                <li class="queue-music-item flex-container-main-between-axis-center my-5">
+                    <div class="left-queue-details flex-container-center">
+                        <span class="item-number text-grey mr-3 font-8rem">05</span>
+                        <img src="./asserts/Images/music-icon2.PNG" alt="music icon" class="music-icon">
+                        <div class="music-details mx-5">
+                            <h4 class="text-white font-9rem">Worry About Us</h4>
+                            <span class="text-grey artist-name font-8rem">Roise Lowe</span>
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart text-grey"></i>
+                </li>
+                <li class="queue-music-item flex-container-main-between-axis-center my-5">
+                    <div class="left-queue-details flex-container-center">
+                        <span class="item-number text-grey mr-3 font-8rem">06</span>
+                        <img src="./asserts/Images/music-icon3.PNG" alt="music icon" class="music-icon">
+                        <div class="music-details mx-5">
+                            <h4 class="text-white font-9rem">New Skin</h4>
+                            <span class="text-grey artist-name font-8rem">Flume</span>
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart text-grey"></i>
+                </li>
+                <li class="queue-music-item flex-container-main-between-axis-center my-5">
+                    <div class="left-queue-details flex-container-center">
+                        <span class="item-number text-grey mr-3 font-8rem">07</span>
+                        <img src="./asserts/Images/music-icon1.PNG" alt="music icon" class="music-icon">
+                        <div class="music-details mx-5">
+                            <h4 class="text-white font-9rem">Miracle</h4>
+                            <span class="text-grey artist-name font-8rem">Else</span>
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart text-grey"></i>
+                </li>
+                <li class="queue-music-item flex-container-main-between-axis-center my-5">
+                    <div class="left-queue-details flex-container-center">
+                        <span class="item-number text-grey mr-3 font-8rem">08</span>
+                        <img src="./asserts/Images/music-icon2.PNG" alt="music icon" class="music-icon">
+                        <div class="music-details mx-5">
+                            <h4 class="text-white font-9rem">Worry About Us</h4>
+                            <span class="text-grey artist-name font-8rem">Roise Lowe</span>
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart text-grey"></i>
+                </li>
+                <li class="queue-music-item flex-container-main-between-axis-center my-5">
+                    <div class="left-queue-details flex-container-center">
+                        <span class="item-number text-grey mr-3 font-8rem">09</span>
+                        <img src="./asserts/Images/music-icon3.PNG" alt="music icon" class="music-icon">
+                        <div class="music-details mx-5">
+                            <h4 class="text-white font-9rem">New Skin</h4>
+                            <span class="text-grey artist-name font-8rem">Flume</span>
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart text-grey"></i>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    </div>
+
+    <!-- Footer container - Music player-->
+    <footer id="main-footer" class="bg-darkgrey flex-container-main-between-axis-center">
+        <!-- Left side music player elements -->
+        <div id="left-side-footer" class="flex flex-container-center">
+            <div id="current-song-img" class="center-img mx-3"></div>
+            <div class="current-song-details text-white">
+                <h3>Imagine by John</h3>
+                <span class="current-song-artist">John Lennon</span>
+            </div>
+            <i class="fa-regular fa-heart ml-3 text-white align-self-start"></i>
+            <i class="fa-solid fa-ban ml-3 text-white align-self-start"></i>
+        </div>
+
+        <!-- Middle side music player elements -->
+        <div id="middle-footer" class="position-relative">
+            <audio src="./music/Cartoon NCS.mp3" controls class="px-3" controlsList="nodownload noplaybackrate">
+            </audio>
+            <i class="fa-solid fa-backward position-absolute"></i>
+            <i class="fa-solid fa-forward position-absolute"></i>
+        </div>
+
+        <!-- Right side music player elements -->
+        <div id="right-side-footer" class="text-white flex flex-container-center gap-decimal5">
+            <div id="playlist-icon" class="icon center-img inline-block"></div>
+            <div id="computer-speaker-icon" class="icon center-img inline-block"></div>
+            <i class="fa-solid fa-volume-high"></i>
+            <div id="progress-bar" class="position-relative">
+                <progress id="volume" value="32" max="100"><i class="fa-solid fa-circle"></i></progress>
+                <i class="fa-solid fa-circle fill position-absolute"></i>
+            </div>
+
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+        </div>
+    </footer>
+
+    <!-- Font awesome CDN script -->
+    <script src="https://kit.fontawesome.com/4c0f048b51.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
